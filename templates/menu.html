@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Fratelli - Cucina Italiana Bar</title>
+{% endblock %}
+
+{% block body %}
+<div class="logo_pic">
+    <img src="../static/picture/Fratteli_Logo.PNG">
+</div>
+
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#menu">Menü</a>
+    <a href="#news">News</a>
+    <a href="#restaurants">Restaurants</a>
+    <a href="#reservation">Reservierung</a>
+</div>
+
+<div class="menu_list">
+    {% for food in foods %}
+    <p>{{ food.name }}</p>
+    <p>{{ food.id }}</p>
+    <p>{{ food.description }}</p>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}
