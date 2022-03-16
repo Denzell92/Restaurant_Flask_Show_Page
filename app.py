@@ -31,11 +31,11 @@ def showMenu():
     return render_template('menu.html', foods=foods)
 
 if insertInDB == True:
-    newFood = Food(name='Lasagne Bolognese', description='Das beste Gericht der Welt', picture_link='../static/picture/food_pictures/Lasagne.PNG')
+    #newFood = Food(name='Lasagne Bolognese', description='Das beste Gericht der Welt', picture_link='../static/picture/food_pictures/Lasagne.PNG')
+    newFood = Food(name='Spaghetti Carbonara', description='Das zweitbeste Gericht der Welt', picture_link='../static/picture/food_pictures/Carbonara.PNG')
+
     db.session.add(newFood)
     db.session.commit()
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)

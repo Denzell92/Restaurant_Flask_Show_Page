@@ -19,12 +19,8 @@
 
 <div class="menu_list">
     {% for food in foods %}
-    <p>{{ food.name }}</p>
-    <p>{{ food.id }}</p>
-    <p>{{ food.description }}</p>
-    <img src='{{ food.picture_link }}' alt="Picture not found">
-    
-
+        <p>{{ food.name }}</p>
+        <img src='{{ food.picture_link }}' alt="Picture not found">
     {% endfor %}
 </div>
 
