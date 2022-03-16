@@ -14,13 +14,14 @@ class Food(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(200), nullable=False)
     description = db.Column(db.Text, nullable=False)
+    picture_link = db.Column(db.String(200), nullable=False)
 
     def __repr__(self):
         return '<Food %r>' % self.id
 
 
 @app.route('/')
-def sayHello():
+def showMainPage():
     return render_template('index.html')
 
 @app.route('/menu')
@@ -30,7 +31,7 @@ def showMenu():
     return render_template('menu.html', foods=foods)
 
 if insertInDB == True:
-    newFood = Food(name='Lasagne Bolognese', description='Das beste Gericht der Welt')
+    newFood = Food(name='Lasagne Bolognese', description='Das beste Gericht der Welt', picture_link='../static/picture/food_pictures/Lasagne.PNG')
     db.session.add(newFood)
     db.session.commit()
 
