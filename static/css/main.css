@@ -25,4 +25,12 @@ body {
 .menu_list {
     text-align: center;
     margin: 15px 15px;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.menu_item {
+    float: left;
+    margin: 15px 15px;
 }

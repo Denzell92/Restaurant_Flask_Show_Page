@@ -32,7 +32,8 @@ def showMenu():
 
 if insertInDB == True:
     #newFood = Food(name='Lasagne Bolognese', description='Das beste Gericht der Welt', picture_link='../static/picture/food_pictures/Lasagne.PNG')
-    newFood = Food(name='Spaghetti Carbonara', description='Das zweitbeste Gericht der Welt', picture_link='../static/picture/food_pictures/Carbonara.PNG')
+    #newFood = Food(name='Spaghetti Carbonara', description='Das zweitbeste Gericht der Welt', picture_link='../static/picture/food_pictures/Carbonara.PNG')
+    newFood = Food(name='Spaghetti mit Fleischbällchen', description='Wundervolle zarte Rindfleischbällchen mit einer würzigen Tomatensoße', picture_link='../static/picture/food_pictures/Fleischbaellchen_Spaghetti.PNG')
 
     db.session.add(newFood)
     db.session.commit()

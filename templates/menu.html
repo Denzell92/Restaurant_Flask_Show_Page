@@ -19,8 +19,10 @@
 
 <div class="menu_list">
     {% for food in foods %}
+    <div class="menu_item">
         <p>{{ food.name }}</p>
         <img src='{{ food.picture_link }}' alt="Picture not found">
+    </div>
     {% endfor %}
 </div>
 
