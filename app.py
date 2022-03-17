@@ -27,8 +27,15 @@ def showMainPage():
 @app.route('/menu')
 def showMenu():
     foods = Food.query.all()
-
     return render_template('menu.html', foods=foods)
+
+@app.route('/menu/<int:id>')
+def showFoodDetailed(id):
+    try:
+        food = Food.query.filter_by(id=id).first()
+        return render_template('menu_product.html', food=food)
+    except AttributeError:
+        return "Product not found"
 
 if insertInDB == True:
     #newFood = Food(name='Lasagne Bolognese', description='Das beste Gericht der Welt', picture_link='../static/picture/food_pictures/Lasagne.PNG')

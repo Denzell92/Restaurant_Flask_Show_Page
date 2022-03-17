@@ -11,21 +11,18 @@
 
 <div class="navbar">
     <a href="/">Home</a>
-    <a href="#menu">Menü</a>
+    <a href="/menu">Menü</a>
     <a href="#news">News</a>
     <a href="#restaurants">Restaurants</a>
     <a href="#reservation">Reservierung</a>
 </div>
 
-<div class="menu_list">
-    {% for food in foods %}
-    <div class="menu_item">
-        <p>{{ food.name }}</p>
-        <a href="menu/{{food.id}}">
-            <img src='{{ food.picture_link }}' alt="Picture not found" height="400">
-        </a>
+<div class="product">
+    <div class="product_item">
+        <h1>{{ food.name }}</h1>
+        <img src='{{ food.picture_link }}' alt="Picture not found" height="400">
+        <p>{{food.description}}</p>
     </div>
-    {% endfor %}
 </div>
 
 
