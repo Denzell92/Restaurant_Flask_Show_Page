@@ -10,15 +10,19 @@
 </div>
 
 <div class="navbar">
-    <a href="/home">Home</a>
+    <a href="/">Home</a>
     <a href="/menu">Menü</a>
     <a href="#news">News</a>
     <a href="#restaurants">Restaurants</a>
     <a href="#reservation">Reservierung</a>
 </div>
 
-<div>
-    <blockquote>Das Leben ist eine Kombination von Magie und Pasta</blockquote>
+<div class="product">
+    <div class="product_item">
+        <h1>{{ food.name }}</h1>
+        <img src='{{ food.picture_link }}' alt="Picture not found" height="400">
+        <p>{{food.description}}</p>
+    </div>
 </div>
 
 

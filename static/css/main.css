@@ -21,3 +21,26 @@ body {
     text-align: center;
     margin: 15px 15px;
 }
+
+.menu_list {
+    text-align: center;
+    margin: 15px 15px;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.menu_item {
+    float: left;
+    margin: 15px 15px;
+}
+
+.product {
+    text-align: center;
+    margin: 15px 15px;
+    font-family: sans-serif;
+}
+
+.product_item {
+    margin: 15px 15px;
+}
